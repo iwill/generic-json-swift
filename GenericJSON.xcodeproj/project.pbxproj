@@ -22,8 +22,7 @@
 		0DB7DD0B1F501DB000539475 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0A1F501DB000539475 /* Decodable.swift */; };
 		0DB7DD0D1F501E5300539475 /* GenericKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0C1F501E5300539475 /* GenericKey.swift */; };
 		0DB7DD0F1F50264E00539475 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0E1F50264E00539475 /* Error.swift */; };
-		0DB7DD1F1F50308300539475 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD1E1F50308300539475 /* Conversions.swift */; };
-		0DB7DD201F50308A00539475 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD1E1F50308300539475 /* Conversions.swift */; };
+		0DDB786A1F505F77007BC950 /* InitializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB78691F505F77007BC950 /* InitializationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,7 @@
 		0DB7DD171F50285E00539475 /* GenericJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericJSON.h; sourceTree = "<group>"; };
 		0DB7DD181F50285E00539475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DB7DD1D1F5028E600539475 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		0DB7DD1E1F50308300539475 /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		0DDB78691F505F77007BC950 /* InitializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +107,6 @@
 			children = (
 				0D8B1C871F5011130071F6FC /* JSON.swift */,
 				0D8B1C891F50113F0071F6FC /* Initialization.swift */,
-				0DB7DD1E1F50308300539475 /* Conversions.swift */,
 				0DB7DD0C1F501E5300539475 /* GenericKey.swift */,
 				0D8B1C8B1F5011910071F6FC /* Encodable.swift */,
 				0DB7DD0A1F501DB000539475 /* Decodable.swift */,
@@ -123,6 +121,7 @@
 			children = (
 				0D8B1C7B1F5011010071F6FC /* CodingTests.swift */,
 				0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */,
+				0DDB78691F505F77007BC950 /* InitializationTests.swift */,
 				0D8B1C7D1F5011010071F6FC /* Info.plist */,
 			);
 			path = GenericJSONTests;
@@ -286,7 +285,6 @@
 			files = (
 				0D8B1C881F5011130071F6FC /* JSON.swift in Sources */,
 				0DB7DD0B1F501DB000539475 /* Decodable.swift in Sources */,
-				0DB7DD1F1F50308300539475 /* Conversions.swift in Sources */,
 				0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */,
 				0DB7DD0D1F501E5300539475 /* GenericKey.swift in Sources */,
 				0DB7DD0F1F50264E00539475 /* Error.swift in Sources */,
@@ -299,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8B1C7C1F5011010071F6FC /* CodingTests.swift in Sources */,
+				0DDB786A1F505F77007BC950 /* InitializationTests.swift in Sources */,
 				0D8B1C8E1F5013DB0071F6FC /* EqualityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +308,6 @@
 			files = (
 				0DB55D1A1F5044E5005F918D /* Initialization.swift in Sources */,
 				0DB55D1B1F5044E9005F918D /* GenericKey.swift in Sources */,
-				0DB7DD201F50308A00539475 /* Conversions.swift in Sources */,
 				0DB55D1D1F5044ED005F918D /* Decodable.swift in Sources */,
 				0DB55D191F5044E2005F918D /* JSON.swift in Sources */,
 				0DB55D1E1F5044F1005F918D /* Error.swift in Sources */,
