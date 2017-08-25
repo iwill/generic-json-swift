@@ -39,6 +39,9 @@ struct Player: Codable {
     let swings: Bool
 }
 
-// {"name": "Miles", "swings": true}
 let val = try JSON(codable: Player(name: "Miles", swings: true))
+val == [
+    "name": "Miles",
+    "swings": true,
+] // true
 ```
