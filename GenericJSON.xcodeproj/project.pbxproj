@@ -13,10 +13,15 @@
 		0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C891F50113F0071F6FC /* Initialization.swift */; };
 		0D8B1C8C1F5011910071F6FC /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C8B1F5011910071F6FC /* Encodable.swift */; };
 		0D8B1C8E1F5013DB0071F6FC /* EqualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */; };
+		0DB55D191F5044E2005F918D /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C871F5011130071F6FC /* JSON.swift */; };
+		0DB55D1A1F5044E5005F918D /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C891F50113F0071F6FC /* Initialization.swift */; };
+		0DB55D1B1F5044E9005F918D /* GenericKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0C1F501E5300539475 /* GenericKey.swift */; };
+		0DB55D1C1F5044EB005F918D /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C8B1F5011910071F6FC /* Encodable.swift */; };
+		0DB55D1D1F5044ED005F918D /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0A1F501DB000539475 /* Decodable.swift */; };
+		0DB55D1E1F5044F1005F918D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0E1F50264E00539475 /* Error.swift */; };
 		0DB7DD0B1F501DB000539475 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0A1F501DB000539475 /* Decodable.swift */; };
 		0DB7DD0D1F501E5300539475 /* GenericKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0C1F501E5300539475 /* GenericKey.swift */; };
 		0DB7DD0F1F50264E00539475 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0E1F50264E00539475 /* Error.swift */; };
-		0DB7DD191F50285E00539475 /* GenericJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB7DD171F50285E00539475 /* GenericJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DB7DD1F1F50308300539475 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD1E1F50308300539475 /* Conversions.swift */; };
 		0DB7DD201F50308A00539475 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD1E1F50308300539475 /* Conversions.swift */; };
 /* End PBXBuildFile section */
@@ -146,7 +151,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DB7DD191F50285E00539475 /* GenericJSON.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB55D1A1F5044E5005F918D /* Initialization.swift in Sources */,
+				0DB55D1B1F5044E9005F918D /* GenericKey.swift in Sources */,
 				0DB7DD201F50308A00539475 /* Conversions.swift in Sources */,
+				0DB55D1D1F5044ED005F918D /* Decodable.swift in Sources */,
+				0DB55D191F5044E2005F918D /* JSON.swift in Sources */,
+				0DB55D1E1F5044F1005F918D /* Error.swift in Sources */,
+				0DB55D1C1F5044EB005F918D /* Encodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +462,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.zoul.GenericJSON;
 				PRODUCT_NAME = GenericJSON;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
