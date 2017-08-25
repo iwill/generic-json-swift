@@ -30,3 +30,15 @@ let json: JSON = [
 let str = try String(data: try JSONEncoder().encode(json), encoding: .utf8)!
 let hopefullyTrue = (json == json) // true!
 ```
+
+Also, you can turn any `Codable` object into a generic JSON structure:
+
+```
+struct Player: Codable {
+    let name: String
+    let swings: Bool
+}
+
+// {"name": "Miles", "swings": true}
+let val = try JSON(codable: Player(name: "Miles", swings: true))
+```

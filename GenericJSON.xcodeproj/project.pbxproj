@@ -17,6 +17,8 @@
 		0DB7DD0D1F501E5300539475 /* GenericKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0C1F501E5300539475 /* GenericKey.swift */; };
 		0DB7DD0F1F50264E00539475 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0E1F50264E00539475 /* Error.swift */; };
 		0DB7DD191F50285E00539475 /* GenericJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB7DD171F50285E00539475 /* GenericJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DB7DD1F1F50308300539475 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD1E1F50308300539475 /* Conversions.swift */; };
+		0DB7DD201F50308A00539475 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD1E1F50308300539475 /* Conversions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		0DB7DD171F50285E00539475 /* GenericJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericJSON.h; sourceTree = "<group>"; };
 		0DB7DD181F50285E00539475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DB7DD1D1F5028E600539475 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0DB7DD1E1F50308300539475 /* Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 			children = (
 				0D8B1C871F5011130071F6FC /* JSON.swift */,
 				0D8B1C891F50113F0071F6FC /* Initialization.swift */,
+				0DB7DD1E1F50308300539475 /* Conversions.swift */,
 				0DB7DD0C1F501E5300539475 /* GenericKey.swift */,
 				0D8B1C8B1F5011910071F6FC /* Encodable.swift */,
 				0DB7DD0A1F501DB000539475 /* Decodable.swift */,
@@ -278,6 +282,7 @@
 			files = (
 				0D8B1C881F5011130071F6FC /* JSON.swift in Sources */,
 				0DB7DD0B1F501DB000539475 /* Decodable.swift in Sources */,
+				0DB7DD1F1F50308300539475 /* Conversions.swift in Sources */,
 				0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */,
 				0DB7DD0D1F501E5300539475 /* GenericKey.swift in Sources */,
 				0DB7DD0F1F50264E00539475 /* Error.swift in Sources */,
@@ -298,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB7DD201F50308A00539475 /* Conversions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
