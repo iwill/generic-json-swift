@@ -3,27 +3,22 @@ import Foundation
 extension JSON: Encodable {
 
     public func encode(to encoder: Encoder) throws {
+
+        var container = encoder.singleValueContainer()
+
         switch self {
-            case .string(let str):
-                var container = encoder.singleValueContainer()
-                try container.encode(str)
-            case .number(let num):
-                var container = encoder.singleValueContainer()
-                try container.encode(num)
-            case .bool(let bool):
-                var container = encoder.singleValueContainer()
+            case let .array(array):
+                try container.encode(array)
+            case let .object(object):
+                try container.encode(object)
+            case let .string(string):
+                try container.encode(string)
+            case let .number(number):
+                try container.encode(number)
+            case let .bool(bool):
                 try container.encode(bool)
             case .null:
-                var container = encoder.singleValueContainer()
                 try container.encodeNil()
-            case .array(let array):
-                var container = encoder.unkeyedContainer()
-                for item in array { try container.encode(item) }
-            case .object(let obj):
-                var container = encoder.container(keyedBy: GenericKey.self)
-                for (key, val) in obj {
-                    try container.encode(val, forKey: GenericKey(key))
-                }
         }
     }
 }

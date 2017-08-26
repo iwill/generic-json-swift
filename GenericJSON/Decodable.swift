@@ -4,38 +4,24 @@ extension JSON: Decodable {
 
     public init(from decoder: Decoder) throws {
 
-        // An object
-        if let keyedContainer = try? decoder.container(keyedBy: GenericKey.self) {
-            var dict: [String:JSON] = [:]
-            for key in keyedContainer.allKeys {
-                dict[key.val] = try keyedContainer.decode(JSON.self, forKey: key)
-            }
-            self = .object(dict)
-            return
-        }
+        let container = try decoder.singleValueContainer()
 
-        // An array
-        if var unkeyedContainer = try? decoder.unkeyedContainer() {
-            var array: [JSON] = []
-            while !unkeyedContainer.isAtEnd {
-                array.append(try unkeyedContainer.decode(JSON.self))
-            }
+        if let object = try? container.decode([String: JSON].self) {
+            self = .object(object)
+        } else if let array = try? container.decode([JSON].self) {
             self = .array(array)
-            return
-        }
-
-        // A single value
-        let singleValueContainer = try decoder.singleValueContainer()
-        if let str = try? singleValueContainer.decode(String.self) {
-            self = .string(str)
-        } else if let bool = try? singleValueContainer.decode(Bool.self) {
+        } else if let string = try? container.decode(String.self) {
+            self = .string(string)
+        } else if let bool = try? container.decode(Bool.self) {
             self = .bool(bool)
-        } else if let num = try? singleValueContainer.decode(Float.self) {
-            self = .number(num)
-        } else if singleValueContainer.decodeNil() {
+        } else if let number = try? container.decode(Float.self) {
+            self = .number(number)
+        } else if container.decodeNil() {
             self = .null
         } else {
-            throw Error.decodingError
+            throw DecodingError.dataCorrupted(
+                .init(codingPath: decoder.codingPath, debugDescription: "Invalid JSON value.")
+            )
         }
     }
 }
