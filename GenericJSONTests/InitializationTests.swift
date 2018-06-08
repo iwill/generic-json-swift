@@ -28,7 +28,7 @@ class InitializationTests: XCTestCase {
             let b: Bool = true
         }
 
-        let json = try JSON(codable: Foo())
+        let json = try JSON(encodable: Foo())
         XCTAssertEqual(json, [
             "a": "foo",
             "b": true,
