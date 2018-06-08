@@ -13,26 +13,6 @@ public enum JSON: Equatable {
     case null
 }
 
-extension JSON: CustomDebugStringConvertible {
-
-    public var debugDescription: String {
-        switch self {
-        case .string(let str):
-            return str.debugDescription
-        case .number(let num):
-            return num.debugDescription
-        case .bool(let bool):
-            return bool.description
-        case .null:
-            return "null"
-        default:
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = [.prettyPrinted]
-            return try! String(data: encoder.encode(self), encoding: .utf8)!
-        }
-    }
-}
-
 extension JSON: Codable {
 
     public func encode(to encoder: Encoder) throws {
@@ -75,6 +55,26 @@ extension JSON: Codable {
             throw DecodingError.dataCorrupted(
                 .init(codingPath: decoder.codingPath, debugDescription: "Invalid JSON value.")
             )
+        }
+    }
+}
+
+extension JSON: CustomDebugStringConvertible {
+
+    public var debugDescription: String {
+        switch self {
+        case .string(let str):
+            return str.debugDescription
+        case .number(let num):
+            return num.debugDescription
+        case .bool(let bool):
+            return bool.description
+        case .null:
+            return "null"
+        default:
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = [.prettyPrinted]
+            return try! String(data: encoder.encode(self), encoding: .utf8)!
         }
     }
 }
