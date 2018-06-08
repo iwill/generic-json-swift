@@ -46,7 +46,6 @@
 		0DB7DD0A1F501DB000539475 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		0DB7DD0E1F50264E00539475 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0DB7DD151F50285E00539475 /* GenericJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenericJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DB7DD171F50285E00539475 /* GenericJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericJSON.h; sourceTree = "<group>"; };
 		0DB7DD181F50285E00539475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DB7DD1D1F5028E600539475 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0DDB78691F505F77007BC950 /* InitializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationTests.swift; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 		0DB7DD161F50285E00539475 /* GenericJSON */ = {
 			isa = PBXGroup;
 			children = (
-				0DB7DD171F50285E00539475 /* GenericJSON.h */,
 				0DB7DD181F50285E00539475 /* Info.plist */,
 			);
 			path = GenericJSON;
