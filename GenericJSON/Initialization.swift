@@ -7,20 +7,20 @@ extension JSON {
     /// of those types.
     public init(_ value: Any) throws {
         switch value {
-            case let num as Float:
-                self = .number(num)
-            case let num as Int:
-                self = .number(Float(num))
-            case let str as String:
-                self = .string(str)
-            case let bool as Bool:
-                self = .bool(bool)
-            case let array as [Any]:
-                self = .array(try array.map(JSON.init))
-            case let dict as [String:Any]:
-                self = .object(try dict.mapValues(JSON.init))
-            default:
-                throw Error.decodingError
+        case let num as Float:
+            self = .number(num)
+        case let num as Int:
+            self = .number(Float(num))
+        case let str as String:
+            self = .string(str)
+        case let bool as Bool:
+            self = .bool(bool)
+        case let array as [Any]:
+            self = .array(try array.map(JSON.init))
+        case let dict as [String:Any]:
+            self = .object(try dict.mapValues(JSON.init))
+        default:
+            throw Error.decodingError
         }
     }
 }
