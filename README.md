@@ -1,4 +1,4 @@
-Swift 4 introduces a new JSON encoding and decoding machinery represented by the `Codable` protocol. The feature is very nice and very type-safe, meaning it’s no longer possible to just willy-nilly decode a JSON string pulling random untyped data from it. Which is good™ most of the time – but what should you do when you _do_ want to just willy-nilly encode or decode a JSON string without introducing a separate, well-typed structure for it? For example:
+Swift 4 introduced a new JSON encoding and decoding machinery represented by the `Codable` protocol. The feature is very nice and very type-safe, meaning it’s no longer possible to just willy-nilly decode a JSON string pulling random untyped data from it. Which is good™ most of the time – but what should you do when you _do_ want to just willy-nilly encode or decode a JSON string without introducing a separate, well-typed structure for it? For example:
 
 ```
 // error: heterogeneous collection literal could only be inferred to '[String : Any]';
@@ -31,7 +31,7 @@ let str = try String(data: try JSONEncoder().encode(json), encoding: .utf8)!
 let hopefullyTrue = (json == json) // true!
 ```
 
-Also, you can turn any `Codable` object into a generic JSON structure:
+Also, you can turn any `Encodable` object into a generic JSON structure:
 
 ```
 struct Player: Codable {
@@ -39,7 +39,7 @@ struct Player: Codable {
     let swings: Bool
 }
 
-let val = try JSON(codable: Player(name: "Miles", swings: true))
+let val = try JSON(encodable: Player(name: "Miles", swings: true))
 val == [
     "name": "Miles",
     "swings": true,
