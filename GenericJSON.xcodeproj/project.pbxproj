@@ -14,8 +14,6 @@
 		0D8B1C8E1F5013DB0071F6FC /* EqualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */; };
 		0DB55D191F5044E2005F918D /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C871F5011130071F6FC /* JSON.swift */; };
 		0DB55D1A1F5044E5005F918D /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C891F50113F0071F6FC /* Initialization.swift */; };
-		0DB55D1E1F5044F1005F918D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0E1F50264E00539475 /* Error.swift */; };
-		0DB7DD0F1F50264E00539475 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7DD0E1F50264E00539475 /* Error.swift */; };
 		0DDB786A1F505F77007BC950 /* InitializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB78691F505F77007BC950 /* InitializationTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +36,6 @@
 		0D8B1C871F5011130071F6FC /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		0D8B1C891F50113F0071F6FC /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualityTests.swift; sourceTree = "<group>"; };
-		0DB7DD0E1F50264E00539475 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0DB7DD151F50285E00539475 /* GenericJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenericJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DB7DD181F50285E00539475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DB7DD1D1F5028E600539475 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -97,7 +94,6 @@
 			children = (
 				0D8B1C871F5011130071F6FC /* JSON.swift */,
 				0D8B1C891F50113F0071F6FC /* Initialization.swift */,
-				0DB7DD0E1F50264E00539475 /* Error.swift */,
 				0D8B1C711F5011010071F6FC /* Info.plist */,
 			);
 			path = GenericJSON;
@@ -271,7 +267,6 @@
 			files = (
 				0D8B1C881F5011130071F6FC /* JSON.swift in Sources */,
 				0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */,
-				0DB7DD0F1F50264E00539475 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +286,6 @@
 			files = (
 				0DB55D1A1F5044E5005F918D /* Initialization.swift in Sources */,
 				0DB55D191F5044E2005F918D /* JSON.swift in Sources */,
-				0DB55D1E1F5044F1005F918D /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

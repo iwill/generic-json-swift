@@ -1,5 +1,7 @@
 import Foundation
 
+private struct InitializationError: Error {}
+
 extension JSON {
 
     /// Create a JSON value from anything. Argument has to be a valid JSON structure:
@@ -20,7 +22,7 @@ extension JSON {
         case let dict as [String:Any]:
             self = .object(try dict.mapValues(JSON.init))
         default:
-            throw Error.decodingError
+            throw InitializationError()
         }
     }
 }
