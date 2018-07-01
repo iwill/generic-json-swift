@@ -54,7 +54,7 @@ public extension JSON {
     ///
     /// If this is not an `.array` or the index is out of bounds, returns `nil`.
     public subscript(index: Int) -> JSON? {
-        if case .array(let arr) = self, index < arr.count {
+        if case .array(let arr) = self, arr.indices.contains(index) {
             return arr[index]
         }
         return nil
