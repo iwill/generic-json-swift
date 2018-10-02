@@ -2,7 +2,7 @@ import Foundation
 
 public extension JSON {
     
-    /// Return the string value if this is a `.string`, otherwise `nil`
+    /// Return the string value if this is a `.string`, otherwise `nil`.
     public var stringValue: String? {
         get {
             if case .string(let value) = self {
@@ -19,7 +19,7 @@ public extension JSON {
         }
     }
     
-    /// Return the float value if this is a `.number`, otherwise `nil`
+    /// Return the float value if this is a `.number`, otherwise `nil`.
     public var floatValue: Float? {
         get {
             if case .number(let value) = self {
@@ -36,7 +36,7 @@ public extension JSON {
         }
     }
     
-    /// Return the bool value if this is a `.bool`, otherwise `nil`
+    /// Return the bool value if this is a `.bool`, otherwise `nil`.
     public var boolValue: Bool? {
         get {
             if case .bool(let value) = self {
@@ -53,7 +53,7 @@ public extension JSON {
         }
     }
     
-    /// Return the object value if this is an `.object`, otherwise `nil`
+    /// Return the object value if this is an `.object`, otherwise `nil`.
     public var objectValue: [String: JSON]? {
         get {
             if case .object(let value) = self {
@@ -70,7 +70,7 @@ public extension JSON {
         }
     }
     
-    /// Return the array value if this is an `.array`, otherwise `nil`
+    /// Return the array value if this is an `.array`, otherwise `nil`.
     public var arrayValue: [JSON]? {
         get {
             if case .array(let value) = self {
@@ -87,7 +87,7 @@ public extension JSON {
         }
     }
     
-    /// Return `true` iff this is `.null`
+    /// Return `true` iff this is `.null`.
     public var isNull: Bool {
         if case .null = self {
             return true
@@ -95,7 +95,7 @@ public extension JSON {
         return false
     }
     
-    /// If this is an `.array`, return item at index
+    /// If this is an `.array`, return item at index.
     ///
     /// If this is not an `.array` or the index is out of bounds, returns `nil`.
     public subscript(index: Int) -> JSON? {
@@ -126,7 +126,7 @@ public extension JSON {
         }
     }
     
-    /// If this is an `.object`, return item at key
+    /// If this is an `.object`, return item at key.
     public subscript(key: String) -> JSON? {
         get {
             if case .object(let dict) = self {
