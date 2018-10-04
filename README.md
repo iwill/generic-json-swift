@@ -62,38 +62,28 @@ Consider the following `JSON` structure:
 
 ```swift
 let json: JSON = [
-            "num": 1,
-            "str": "baz",
-            "bool": true,
-            "obj": [
-                "foo": "jar",
-                "bar": 1,
-            ]
-        ]
+    "num": 1,
+    "str": "baz",
+    "bool": true,
+    "obj": [
+        "foo": "jar",
+        "bar": 1,
+    ]
+]
 ```
 
-Querying values can be done using optional property accessors or subscripting.
-
-#### Property accessors
+Querying values can be done using optional property accessors, subscripting or dynamic member subscripting:
 
 ```swift
-if let str = json.objectValue?["str"]?.stringValue {
-    // use "baz"
-}
+// Property accessors
+if let str = json.objectValue?["str"]?.stringValue { … }
+if let foo = json.objectValue?["obj"]?.objectValue?["foo"]?.stringValue { … }
 
-if let foo = json.objectValue?["obj"]?.objectValue?["foo"]?.stringValue {
-    // use "jar"
-}
-```
+// Subscripting
+if let str = json["str"]?.stringValue { … }
+if let foo = json["obj"]?["foo"]?.stringValue { … }
 
-#### Subscript
-
-```swift
-if let str = json["str"]?.stringValue {
-    // use "baz"
-}
-
-if let foo = json["obj"]?["foo"]?.stringValue {
-    // use "jar"
-}
+// Dynamic member subscripting
+if let str = json.str?.stringValue { … }
+if let foo = json.obj?.foo?.stringValue { … }
 ```
