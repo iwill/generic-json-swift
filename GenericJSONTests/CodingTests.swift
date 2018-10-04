@@ -3,6 +3,7 @@ import XCTest
 
 class CodingTests: XCTestCase {
     
+    @available(OSX 10.13, *)
     func testEncoding() throws {
         let json1: JSON = [
             "num": 1,
@@ -12,10 +13,12 @@ class CodingTests: XCTestCase {
             "array": [],
             "obj": [:],
         ]
-        let encoded = try JSONEncoder().encode(json1)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .sortedKeys
+        let encoded = try encoder.encode(json1)
         let str = String(data: encoded, encoding: .utf8)!
         XCTAssertEqual(str, """
-            {"array":[],"num":1,"bool":true,"obj":{},"null":null,"str":"baz"}
+            {"array":[],"bool":true,"null":null,"num":1,"obj":{},"str":"baz"}
             """)
     }
 
