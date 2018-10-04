@@ -5,7 +5,7 @@ class CodingTests: XCTestCase {
     
     @available(OSX 10.13, *)
     func testEncoding() throws {
-        let json1: JSON = [
+        let json: JSON = [
             "num": 1,
             "str": "baz",
             "bool": true,
@@ -15,7 +15,7 @@ class CodingTests: XCTestCase {
         ]
         let encoder = JSONEncoder()
         encoder.outputFormatting = .sortedKeys
-        let encoded = try encoder.encode(json1)
+        let encoded = try encoder.encode(json)
         let str = String(data: encoded, encoding: .utf8)!
         XCTAssertEqual(str, """
             {"array":[],"bool":true,"null":null,"num":1,"obj":{},"str":"baz"}
