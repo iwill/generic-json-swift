@@ -52,4 +52,10 @@ class QueryingTests: XCTestCase {
         XCTAssertEqual(json[0], nil)
         XCTAssertEqual(json["nonesuch"], nil)
     }
+
+    func testStringSubscriptingSugar() {
+        let json: JSON = ["foo": "bar"]
+        XCTAssertEqual(json.foo, JSON.string("bar"))
+        XCTAssertEqual(json.nonesuch, nil)
+    }
 }
