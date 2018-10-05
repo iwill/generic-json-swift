@@ -58,4 +58,27 @@ class QueryingTests: XCTestCase {
         XCTAssertEqual(json.foo, JSON.string("bar"))
         XCTAssertEqual(json.nonesuch, nil)
     }
+    
+    func testKeyPath() {
+        let json: JSON = [
+            "string": "Hello World",
+            "boolean": true,
+            "number": 123,
+            "object": [
+                "str": "boo",
+                "arr": [1, 2, 3],
+                "obj": [
+                    "x": "roo",
+                    "y": "too",
+                    "z": "yoo"
+                ]
+            ]
+        ]
+        XCTAssertEqual(json.valueForKeyPath("string"), JSON.string("Hello World"))
+        XCTAssertEqual(json.valueForKeyPath("boolean"), JSON.bool(true))
+        XCTAssertEqual(json.valueForKeyPath("number"), JSON.number(123))
+        XCTAssertEqual(json.valueForKeyPath("object.str"), JSON.string("boo"))
+        XCTAssertEqual(json.valueForKeyPath("object.arr"), JSON.array([1, 2, 3]))
+        XCTAssertEqual(json.valueForKeyPath("object.obj.y"), JSON.string("too"))
+    }
 }
