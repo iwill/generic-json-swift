@@ -1,5 +1,7 @@
 # Generic JSON
 
+[![Build Status](https://travis-ci.org/zoul/generic-json-swift.svg?branch=master)](https://travis-ci.org/zoul/generic-json-swift)
+
 Generic JSON makes it easy to deal with freeform JSON strings without creating a separate, well-typed structure.
 
 ## Codable and freeform JSON
