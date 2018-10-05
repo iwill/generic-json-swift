@@ -77,7 +77,7 @@ public extension JSON {
     
     /// Return the JSON type at the keypath if this is an `.object`, otherwise `nil`
     ///
-    /// This lets you write `json["foo.bar.jar"]`.
+    /// This lets you write `json.valueForKeyPath("foo.bar.jar")`.
     public func valueForKeyPath(_ keyPath: String) -> JSON? {
         
         guard case .object(let object) = self else {
