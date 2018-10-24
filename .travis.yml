@@ -4,3 +4,4 @@ xcode_project: GenericJSON.xcodeproj
 xcode_scheme: "GenericJSON macOS"
 after_success:
     - bundle exec pod lib lint
+    - swift test
