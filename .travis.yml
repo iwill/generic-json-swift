@@ -1,7 +1,7 @@
 osx_image: xcode10
 language: objective-c
 xcode_project: GenericJSON.xcodeproj
-xcode_scheme: "GenericJSON macOS"
+xcode_scheme: GenericJSON
 after_success:
     - bundle exec pod lib lint
     - swift test
