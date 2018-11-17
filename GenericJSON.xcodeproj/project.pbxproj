@@ -14,6 +14,7 @@
 		0D8B1C881F5011130071F6FC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C871F5011130071F6FC /* JSON.swift */; };
 		0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C891F50113F0071F6FC /* Initialization.swift */; };
 		0D8B1C8E1F5013DB0071F6FC /* EqualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */; };
+		AD6635BA21A007A2003708C4 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6635B921A007A2003708C4 /* KeyPath.swift */; };
 		FC5111AD2180B8E200D335C5 /* QueryingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5111AC2180B8E100D335C5 /* QueryingTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		0DB7DD181F50285E00539475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DB7DD1D1F5028E600539475 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0DDB78691F505F77007BC950 /* InitializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationTests.swift; sourceTree = "<group>"; };
+		AD6635B921A007A2003708C4 /* KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPath.swift; sourceTree = "<group>"; };
 		FC5111AC2180B8E100D335C5 /* QueryingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				0D8B1C871F5011130071F6FC /* JSON.swift */,
 				0D8B1C891F50113F0071F6FC /* Initialization.swift */,
 				0D25131E20E7322F0079E170 /* Querying.swift */,
+				AD6635B921A007A2003708C4 /* KeyPath.swift */,
 				0D8B1C711F5011010071F6FC /* Info.plist */,
 			);
 			path = GenericJSON;
@@ -225,6 +228,7 @@
 			files = (
 				0D25131F20E7322F0079E170 /* Querying.swift in Sources */,
 				0D8B1C881F5011130071F6FC /* JSON.swift in Sources */,
+				AD6635BA21A007A2003708C4 /* KeyPath.swift in Sources */,
 				0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
