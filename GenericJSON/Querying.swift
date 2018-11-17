@@ -74,4 +74,33 @@ public extension JSON {
     subscript(dynamicMember member: String) -> JSON? {
         return self[member]
     }
+    
+    /// Return the JSON type at the keypath if this is an `.object`, otherwise `nil`
+    ///
+    /// This lets you write `json.valueForKeyPath("foo.bar.jar")`.
+    public func valueForKeyPath(_ keyPath: String) -> JSON? {
+        
+        guard case .object(let object) = self else {
+            return nil
+        }
+        
+        var keys = keyPath.components(separatedBy: ".")
+        guard let key = keys.first else {
+            return nil
+        }
+        
+        guard let json = object[key] else {
+            return nil
+        }
+        keys.remove(at: 0)
+        
+        // recurse on the json if of case objectValue
+        if !keys.isEmpty,  let _ = json.objectValue {
+            let rejoined = keys.joined(separator: ".")
+            return json.valueForKeyPath(rejoined)
+        }
+        
+        return json
+        
+    }
 }
