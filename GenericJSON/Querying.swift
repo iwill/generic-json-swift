@@ -75,7 +75,9 @@ public extension JSON {
         return self[member]
     }
     
-    /// 
+    /// Return the JSON type at the key path if this is an `.object`, otherwise `nil`.
+    ///
+    /// This lets you write `json[keyPath: KeyPath("foo.bar.jar")`.
     public subscript(keyPath keyPath: KeyPath) -> JSON? {
         get {
             switch keyPath.headAndTail() {
