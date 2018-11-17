@@ -74,4 +74,29 @@ public extension JSON {
     subscript(dynamicMember member: String) -> JSON? {
         return self[member]
     }
+    
+    /// 
+    public subscript(keyPath keyPath: KeyPath) -> JSON? {
+        get {
+            switch keyPath.headAndTail() {
+            case nil:
+                // key path is empty
+                return nil
+            case let (head, tail)? where tail.isEmpty:
+                // reached end of key path
+                let key = Key(stringLiteral: head)
+                return self[key]
+            case let (head, tail)?:
+                // key path has tail we need to traverse
+                let key = Key(stringLiteral: head)
+                
+                if let json = self[key] {
+                    return json[keyPath: tail]
+                } else {
+                    return nil
+                }
+                
+            }
+        }
+    }
 }
