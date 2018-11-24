@@ -77,30 +77,31 @@ public extension JSON {
     
     /// Return the JSON type at the keypath if this is an `.object`, otherwise `nil`
     ///
-    /// This lets you write `json.valueForKeyPath("foo.bar.jar")`.
-    public func valueForKeyPath(_ keyPath: String) -> JSON? {
+    /// This lets you write `json[keyPath: "foo.bar.jar"]`.
+    public subscript(keyPath keyPath: String) -> JSON? {
+        return queryKeyPath(keyPath.components(separatedBy: "."))
+    }
+    
+    func queryKeyPath<T>(_ path: T) -> JSON? where T: Collection, T.Element == String {
         
+        // Only object values may be subscripted
         guard case .object(let object) = self else {
             return nil
         }
         
-        var keys = keyPath.components(separatedBy: ".")
-        guard let key = keys.first else {
+        // Is the path non-empty?
+        guard let head = path.first else {
             return nil
         }
         
-        guard let json = object[key] else {
+        // Do we have a value at the required key?
+        guard let value = object[head] else {
             return nil
         }
-        keys.remove(at: 0)
         
-        // recurse on the json if of case objectValue
-        if !keys.isEmpty,  let _ = json.objectValue {
-            let rejoined = keys.joined(separator: ".")
-            return json.valueForKeyPath(rejoined)
-        }
+        let tail = path.dropFirst()
         
-        return json
-        
+        return tail.isEmpty ? value : value.queryKeyPath(tail)
     }
+    
 }
