@@ -74,4 +74,34 @@ public extension JSON {
     subscript(dynamicMember member: String) -> JSON? {
         return self[member]
     }
+    
+    /// Return the JSON type at the keypath if this is an `.object`, otherwise `nil`
+    ///
+    /// This lets you write `json[keyPath: "foo.bar.jar"]`.
+    public subscript(keyPath keyPath: String) -> JSON? {
+        return queryKeyPath(keyPath.components(separatedBy: "."))
+    }
+    
+    func queryKeyPath<T>(_ path: T) -> JSON? where T: Collection, T.Element == String {
+        
+        // Only object values may be subscripted
+        guard case .object(let object) = self else {
+            return nil
+        }
+        
+        // Is the path non-empty?
+        guard let head = path.first else {
+            return nil
+        }
+        
+        // Do we have a value at the required key?
+        guard let value = object[head] else {
+            return nil
+        }
+        
+        let tail = path.dropFirst()
+        
+        return tail.isEmpty ? value : value.queryKeyPath(tail)
+    }
+    
 }
