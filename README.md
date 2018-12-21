@@ -90,7 +90,7 @@ if let str = json.str?.stringValue { … }
 if let foo = json.obj?.foo?.stringValue { … }
 ```
 
-You may even drill through nested structures using a comma-separated key path:
+You may even drill through nested structures using a dot-separated key path:
 
 ```swift
 let val = json[keyPath: "obj.foo"] // "jar"
