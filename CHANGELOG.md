@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Update podspec to always point to the latest tagged version [zoul]
+
 ## [1.1.1] - 2019-01-06
 
 - First version with a changelog :)
