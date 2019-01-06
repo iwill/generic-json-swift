@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.1.1] - 2019-01-06
+
 - First version with a changelog :)
 - Add basic Swift Package Manager support [zoul]
 - Switch to a platform-neutral build target [zoul]
