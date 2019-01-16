@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Set explicit iOS Deployment Target [rudedogdhc]
+
 ## [1.1.2] - 2019-01-06
 
 - Update podspec to always point to the latest tagged version [zoul]
