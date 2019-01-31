@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.1.4] - 2019-01-31
+
 - Remove redundant “public” keyword from extensions [rudedogdhc]
 
 ## [1.1.3] - 2019-01-16
