@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Remove redundant “public” keyword from extensions [rudedogdhc]
+
 ## [1.1.3] - 2019-01-16
 
 - Set explicit iOS Deployment Target [rudedogdhc]
