@@ -21,6 +21,16 @@ class InitializationTests: XCTestCase {
         XCTAssertThrowsError(try JSON(["foo": Date()]))
     }
 
+    func testNilInitializationFromAny() throws {
+        XCTAssertEqual(try JSON(Optional<Int>.none as Any), .null)
+        XCTAssertEqual(try JSON(Optional<Date>.none as Any), .null)
+        XCTAssertThrowsError(try JSON(Optional<Date>.some(Date()) as Any))
+    }
+
+    func testNSNullInitialization() throws {
+        XCTAssertEqual(try JSON(NSNull()), .null)
+    }
+
     func testInitializationFromCodable() throws {
 
         struct Foo: Codable {

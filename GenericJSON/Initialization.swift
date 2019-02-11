@@ -4,11 +4,18 @@ private struct InitializationError: Error {}
 
 extension JSON {
 
-    /// Create a JSON value from anything. Argument has to be a valid JSON structure:
-    /// A `Float`, `Int`, `String`, `Bool`, an `Array` of those types or a `Dictionary`
-    /// of those types.
+    /// Create a JSON value from anything.
+    ///
+    /// Argument has to be a valid JSON structure: A `Float`, `Int`, `String`,
+    /// `Bool`, an `Array` of those types or a `Dictionary` of those types.
+    ///
+    /// You can also pass `nil` or `NSNull`, both will be treated as `.null`.
     public init(_ value: Any) throws {
         switch value {
+        case _ as NSNull:
+            self = .null
+        case let opt as Optional<Any> where opt == nil:
+            self = .null
         case let num as Float:
             self = .number(num)
         case let num as Int:
