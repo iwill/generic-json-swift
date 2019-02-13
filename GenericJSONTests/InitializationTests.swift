@@ -2,8 +2,17 @@ import XCTest
 @testable import GenericJSON
 
 class InitializationTests: XCTestCase {
-    
-    func testInitialization() throws {
+
+    func testLiteralInitialization() {
+        XCTAssertEqual(nil as JSON, .null)
+        XCTAssertEqual(true as JSON, .bool(true))
+        XCTAssertEqual([1, 2] as JSON, .array([.number(1), .number(2)]))
+        XCTAssertEqual(["x": 1] as JSON, .object(["x": .number(1)]))
+        XCTAssertEqual(1.25 as JSON, .number(1.25))
+        XCTAssertEqual("foo" as JSON, .string("foo"))
+    }
+
+    func testValueInitialization() throws {
         let num = 1
         let bool = true
         let str = "foo"
