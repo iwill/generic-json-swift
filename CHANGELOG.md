@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Allow initialization from nil and NSNull values [cjmconie]
+
 ## [1.1.4] - 2019-01-31
 
 - Remove redundant “public” keyword from extensions [rudedogdhc]
