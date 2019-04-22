@@ -16,6 +16,7 @@
 		0D8B1C881F5011130071F6FC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C871F5011130071F6FC /* JSON.swift */; };
 		0D8B1C8A1F50113F0071F6FC /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C891F50113F0071F6FC /* Initialization.swift */; };
 		0D8B1C8E1F5013DB0071F6FC /* EqualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */; };
+		D932B8C8226E0EC50024B3BC /* EditingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932B8C7226E0EC50024B3BC /* EditingTests.swift */; };
 		FC5111AD2180B8E200D335C5 /* QueryingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5111AC2180B8E100D335C5 /* QueryingTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		0DB7DD181F50285E00539475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DB7DD1D1F5028E600539475 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0DDB78691F505F77007BC950 /* InitializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationTests.swift; sourceTree = "<group>"; };
+		D932B8C7226E0EC50024B3BC /* EditingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingTests.swift; sourceTree = "<group>"; };
 		FC5111AC2180B8E100D335C5 /* QueryingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				FC5111AC2180B8E100D335C5 /* QueryingTests.swift */,
 				0D8B1C7B1F5011010071F6FC /* CodingTests.swift */,
 				0DDB78691F505F77007BC950 /* InitializationTests.swift */,
+				D932B8C7226E0EC50024B3BC /* EditingTests.swift */,
 				0D8B1C8D1F5013DB0071F6FC /* EqualityTests.swift */,
 				0D7AB1C021A3F6EF006333EF /* MergingTests.swift */,
 				0D8B1C7D1F5011010071F6FC /* Info.plist */,
@@ -242,6 +245,7 @@
 			files = (
 				FC5111AD2180B8E200D335C5 /* QueryingTests.swift in Sources */,
 				0D8B1C7C1F5011010071F6FC /* CodingTests.swift in Sources */,
+				D932B8C8226E0EC50024B3BC /* EditingTests.swift in Sources */,
 				0D25132320E732CA0079E170 /* InitializationTests.swift in Sources */,
 				0D8B1C8E1F5013DB0071F6FC /* EqualityTests.swift in Sources */,
 				0D7AB1C121A3F6EF006333EF /* MergingTests.swift in Sources */,
