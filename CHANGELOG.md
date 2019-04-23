@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.2.1] - 2019-04-23
+
 - Trivial release to change versioning tags
 
 ## [1.2.0] - 2019-02-13
