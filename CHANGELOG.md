@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Trivial release to change versioning tags
+
 ## [1.2.0] - 2019-02-13
 
 - Allow initialization from nil and NSNull values [cjmconie]
