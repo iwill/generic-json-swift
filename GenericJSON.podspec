@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/zoul/generic-json-swift'
   s.authors = 'Tomáš Znamenáček'
   s.summary = 'A simple Swift library for working with generic JSON structures.'
-  s.source = { :git => 'https://github.com/zoul/generic-json-swift.git', :tag => "release/#{s.version}" }
+  s.source = { :git => 'https://github.com/zoul/generic-json-swift.git', :tag => s.version }
   s.source_files = 'GenericJSON/*.swift'
   s.swift_version = "4.1"
 end
