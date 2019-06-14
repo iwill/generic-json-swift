@@ -44,13 +44,13 @@ extension JSON {
     ///
     /// This is a non-mutating version of `merge(with:)`.
     public func merging(with new: JSON) -> JSON {
-        return with(self) {
+        return with(copyOf: self) {
             $0.merge(with: new)
         }
     }
 }
 
-private func with<T>(_ item: T, update: (inout T) throws -> Void) rethrows -> T {
+private func with<T>(copyOf item: T, update: (inout T) throws -> Void) rethrows -> T {
     var this = item
     try update(&this)
     return this
