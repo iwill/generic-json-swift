@@ -16,10 +16,10 @@ extension JSON {
             self = .null
         case let opt as Optional<Any> where opt == nil:
             self = .null
-        case let num as Float:
+        case let num as Double:
             self = .number(num)
         case let num as Int:
-            self = .number(Float(num))
+            self = .number(Double(num))
         case let str as String:
             self = .string(str)
         case let bool as Bool:
@@ -78,7 +78,7 @@ extension JSON: ExpressibleByDictionaryLiteral {
 
 extension JSON: ExpressibleByFloatLiteral {
 
-    public init(floatLiteral value: Float) {
+    public init(floatLiteral value: Double) {
         self = .number(value)
     }
 }
@@ -86,7 +86,7 @@ extension JSON: ExpressibleByFloatLiteral {
 extension JSON: ExpressibleByIntegerLiteral {
 
     public init(integerLiteral value: Int) {
-        self = .number(Float(value))
+        self = .number(Double(value))
     }
 }
 
