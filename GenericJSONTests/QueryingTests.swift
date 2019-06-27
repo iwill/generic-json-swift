@@ -10,9 +10,9 @@ class QueryingTests: XCTestCase {
     }
 
     func testFloatValue() {
-        XCTAssertEqual(JSON.number(42).floatValue, 42)
-        XCTAssertEqual(JSON.string("foo").floatValue, nil)
-        XCTAssertEqual(JSON.null.floatValue, nil)
+        XCTAssertEqual(JSON.number(42).doubleValue, 42)
+        XCTAssertEqual(JSON.string("foo").doubleValue, nil)
+        XCTAssertEqual(JSON.null.doubleValue, nil)
     }
 
     func testBoolValue() {
