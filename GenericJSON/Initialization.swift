@@ -16,10 +16,12 @@ extension JSON {
             self = .null
         case let opt as Optional<Any> where opt == nil:
             self = .null
-        case let num as Double:
-            self = .number(num)
-        case let num as Int:
-            self = .number(Double(num))
+        case let num as NSNumber:
+            if num.isBool {
+                self = .bool(num.boolValue)
+            } else {
+                self = .number(num.doubleValue)
+            }
         case let str as String:
             self = .string(str)
         case let bool as Bool:
@@ -96,3 +98,21 @@ extension JSON: ExpressibleByStringLiteral {
         self = .string(value)
     }
 }
+
+// MARK: - NSNumber
+
+extension NSNumber {
+    fileprivate var isBool: Bool {
+        let objCType = String(cString: self.objCType)
+        if (self.compare(trueNumber) == .orderedSame && objCType == trueObjCType) || (self.compare(falseNumber) == .orderedSame && objCType == falseObjCType) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+private let trueNumber = NSNumber(value: true)
+private let falseNumber = NSNumber(value: false)
+private let trueObjCType = String(cString: trueNumber.objCType)
+private let falseObjCType = String(cString: falseNumber.objCType)
