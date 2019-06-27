@@ -53,4 +53,40 @@ class InitializationTests: XCTestCase {
             "b": true,
         ])
     }
+
+    func testInitializationFromJSONSerilization() throws {
+
+        let jsonData = """
+            {
+                "array": [
+                    1,
+                    2,
+                    3
+                ],
+                "boolean": true,
+                "null": null,
+                "number": 1,
+                "greatest_int": \(Int.max),
+                "greatest_double": \(Double.greatestFiniteMagnitude),
+                "object": {
+                    "a": "b"
+                },
+                "string": "Hello World"
+            }
+            """.data(using: .utf8)!
+
+        let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+        let json = try JSON(jsonObject)
+
+        XCTAssertEqual(JSON.array([1, 2, 3]), json["array"]!)
+        XCTAssertEqual(JSON.bool(true), json["boolean"]!)
+        XCTAssertEqual(JSON.number(1), json["number"]!)
+        XCTAssertEqual(JSON.number(Double(Int.max)), json["greatest_int"]!)
+        XCTAssertEqual(JSON.number(Double.greatestFiniteMagnitude), json["greatest_double"]!)
+        XCTAssertEqual(JSON.null, json["null"]!)
+        XCTAssertEqual(JSON.object(["a": "b"]), json["object"]!)
+        XCTAssertEqual(JSON.string("Hello World"), json["string"]!)
+
+    }
+
 }
