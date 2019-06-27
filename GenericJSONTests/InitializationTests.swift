@@ -8,7 +8,7 @@ class InitializationTests: XCTestCase {
         XCTAssertEqual(true as JSON, .bool(true))
         XCTAssertEqual([1, 2] as JSON, .array([.number(1), .number(2)]))
         XCTAssertEqual(["x": 1] as JSON, .object(["x": .number(1)]))
-        XCTAssertEqual(1.25 as JSON, .number(1.25))
+        XCTAssertEqual(3.4028236e+38 as JSON, .number(3.4028236e+38))
         XCTAssertEqual("foo" as JSON, .string("foo"))
     }
 
