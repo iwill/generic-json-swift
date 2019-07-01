@@ -6,7 +6,7 @@ extension JSON {
 
     /// Create a JSON value from anything.
     ///
-    /// Argument has to be a valid JSON structure: A `Float`, `Int`, `String`,
+    /// Argument has to be a valid JSON structure: A `Double`, `Int`, `String`,
     /// `Bool`, an `Array` of those types or a `Dictionary` of those types.
     ///
     /// You can also pass `nil` or `NSNull`, both will be treated as `.null`.
@@ -102,6 +102,12 @@ extension JSON: ExpressibleByStringLiteral {
 // MARK: - NSNumber
 
 extension NSNumber {
+
+    /// Boolean value indicating whether this `NSNumber` wraps a boolean.
+    ///
+    /// For example, when using `NSJSONSerialization` Bool values are converted into `NSNumber` instances.
+    ///
+    /// - seealso: https://stackoverflow.com/a/49641315/3589408
     fileprivate var isBool: Bool {
         let objCType = String(cString: self.objCType)
         if (self.compare(trueNumber) == .orderedSame && objCType == trueObjCType) || (self.compare(falseNumber) == .orderedSame && objCType == falseObjCType) {
