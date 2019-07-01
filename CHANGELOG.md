@@ -2,6 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Fix initialization from `NSNumber` booleans [cjmconie]
+- Change `Float` number representation to `Double` [cjmconie]
+
 ## [1.2.1] - 2019-04-23
 
 - Trivial release to change versioning tags
