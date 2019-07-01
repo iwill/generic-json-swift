@@ -10,8 +10,8 @@ public extension JSON {
         return nil
     }
 
-    /// Return the float value if this is a `.number`, otherwise `nil`
-    var floatValue: Float? {
+    /// Return the double value if this is a `.number`, otherwise `nil`
+    var doubleValue: Double? {
         if case .number(let value) = self {
             return value
         }

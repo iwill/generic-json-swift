@@ -6,7 +6,7 @@ import Foundation
 /// or strings.
 @dynamicMemberLookup public enum JSON: Equatable {
     case string(String)
-    case number(Float)
+    case number(Double)
     case object([String:JSON])
     case array([JSON])
     case bool(Bool)
@@ -47,7 +47,7 @@ extension JSON: Codable {
             self = .string(string)
         } else if let bool = try? container.decode(Bool.self) {
             self = .bool(bool)
-        } else if let number = try? container.decode(Float.self) {
+        } else if let number = try? container.decode(Double.self) {
             self = .number(number)
         } else if container.decodeNil() {
             self = .null
