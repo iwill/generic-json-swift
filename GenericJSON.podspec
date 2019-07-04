@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name = 'GenericJSON'
   s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.14'
-  s.version = '1.2.1'
+  s.version = '2.0.0'
   s.license = { :type => 'MIT' }
   s.homepage = 'https://github.com/zoul/generic-json-swift'
   s.authors = 'Tomáš Znamenáček'

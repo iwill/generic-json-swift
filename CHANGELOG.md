@@ -1,6 +1,6 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
-## [Unreleased]
+## [2.0.0] - 2019-07-04
 
 - Fix initialization from `NSNumber` booleans [cjmconie]
 - Change `Float` number representation to `Double` [cjmconie]
