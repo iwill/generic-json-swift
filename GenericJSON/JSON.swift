@@ -78,3 +78,5 @@ extension JSON: CustomDebugStringConvertible {
         }
     }
 }
+
+extension JSON: Hashable {}
