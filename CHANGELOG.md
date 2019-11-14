@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [2.0.1] - 2019-11-14
+
 - Conform `JSON` to `Hashable` [cjmconie]
 
 ## [2.0.0] - 2019-07-04
