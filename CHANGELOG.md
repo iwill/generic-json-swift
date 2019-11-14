@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Conform `JSON` to `Hashable` [cjmconie]
+
 ## [2.0.0] - 2019-07-04
 
 - Fix initialization from `NSNumber` booleans [cjmconie]
