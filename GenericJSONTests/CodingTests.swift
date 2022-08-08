@@ -22,13 +22,6 @@ class CodingTests: XCTestCase {
             """)
     }
 
-    func testFragmentEncoding() {
-        let fragments: [JSON] = ["foo", 1, true, nil]
-        for f in fragments {
-            XCTAssertThrowsError(try JSONEncoder().encode(f))
-        }
-    }
-
     func testDecoding() throws {
         let input = """
             {"array":[1],"num":1,"bool":true,"obj":{},"null":null,"str":"baz"}
