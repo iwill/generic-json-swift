@@ -43,8 +43,8 @@ class InitializationTests: XCTestCase {
     func testInitializationFromCodable() throws {
 
         struct Foo: Codable {
-            let a: String = "foo"
-            let b: Bool = true
+            var a: String = "foo"
+            var b: Bool = true
         }
 
         let json = try JSON(encodable: Foo())
