@@ -17,7 +17,7 @@ class InitializationTests: XCTestCase {
         let bool = true
         let str = "foo"
         let json = try JSON([
-            "a": [num, bool],
+            "a": [num, bool] as [Any],
             "b": [str, [str], [str: bool]],
         ])
         XCTAssertEqual(json, [
