@@ -4,7 +4,7 @@ import Foundation
 /// for JSON values, since it makes sure only valid JSON values are present & supports `Equatable`
 /// and `Codable`, so that you can compare values for equality and code and decode them into data
 /// or strings.
-@dynamicMemberLookup public enum JSON: Equatable {
+@dynamicMemberLookup public enum JSON: Sendable, Equatable {
     case string(String)
     case number(Double)
     case object([String:JSON])
