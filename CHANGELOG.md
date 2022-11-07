@@ -2,6 +2,10 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [2.0.2] - 2022-10-13
+
+- Fix warning about Swift version [iwill]
+
 ## [2.0.1] - 2019-11-14
 
 - Conform `JSON` to `Hashable` [cjmconie]
