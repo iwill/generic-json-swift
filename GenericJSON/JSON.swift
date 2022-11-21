@@ -13,6 +13,10 @@ import Foundation
     case null
 }
 
+#if swift(>=5.5)
+extension JSON : Sendable{}
+#endif
+
 extension JSON: Codable {
 
     public func encode(to encoder: Encoder) throws {
